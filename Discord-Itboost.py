@@ -9,12 +9,12 @@ from bs4 import BeautifulSoup
 import urllib.parse
 from typing import List, Literal
 
-# --- CONFIGURAÇÕES ---
-TOKEN = os.getenv("","")  # Corrigido
+
+TOKEN = os.getenv("","")  
 DB_FILE = "cursos_usuarios.db"
 CourseType = Literal["free", "paid", "all"]
 
-# --- LISTA DE SITES E CATEGORIAS (Internalizada) ---
+
 SITES_DE_BUSCA = {
     "Udemy": {"url": "https://www.udemy.com/courses/search/?q={}&sort=relevance", "base": "https://www.udemy.com", "filter": "/course/", "type": "mixed"},
     "Coursera": {"url": "https://www.coursera.org/search?query={}", "base": "https://www.coursera.org", "filter": "/learn/", "type": "mixed"},
